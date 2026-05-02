@@ -1,0 +1,16 @@
+.DS_Store
+.env
+*.local
+project-profile.local.md
+docs/ai-worklog/private/
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
