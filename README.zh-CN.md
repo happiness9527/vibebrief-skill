@@ -132,6 +132,25 @@ Skill 名称保持为 vibebrief。
 
 如果安装后 `/vibebrief` 没有被识别，不代表 VibeBrief 不能用。你可以先使用 [不安装也能先试](#不安装也能先试) 的 Prompt 模式，或者让当前 AI 工具说明它支持的本地指令 / Skill 安装方式。
 
+如果安装后 `/vibebrief` 提示 `Unknown command`，请完全退出并重启 Claude Code；新安装的本地 Skill 通常需要新 session 才会被识别。
+
+## 使用 /vibebrief
+
+如果你只输入 `/vibebrief`，VibeBrief 应该显示一个简单菜单：
+
+请选择你想让 VibeBrief 做什么：
+
+1. 本轮开发简报（默认推荐）：我想看懂这轮 AI 到底做了什么
+2. 可信度检查：AI 说修好了，我想判断是否真的可靠
+3. 新对话交接包：我要换新 chat，希望下一轮能接上
+4. 阶段报告：我想判断这轮是否可以作为一个阶段节点
+5. 可视化流程图：我想用图看懂流程、风险或修复链路
+6. 项目记忆保存：我想把这轮结果整理成可保存的项目资料
+
+如果不确定，直接选 1。
+
+如果你在 `/vibebrief` 后面直接附带 AI coding 对话、日志、终端输出或自然语言需求，VibeBrief 应优先自动判断 intent，而不是强制弹出选择菜单。
+
 ## 核心模式
 
 | 模式 | 什么时候用 | 输出什么 |
@@ -140,8 +159,8 @@ Skill 名称保持为 vibebrief。
 | Milestone Report｜阶段总结报告 | 你不确定这轮是否算阶段节点 | 阶段目标、已完成能力、关键决策、风险、下一阶段边界 |
 | Handoff Pack｜新对话交接包 | 你要新开对话或换 AI | 项目背景、当前状态、未解决问题、避坑事项、可执行 Prompt |
 | Visual Summary｜可视化总结 | 你想用图理解流程 | Mermaid 流程图、路线图、修复链路图、风险图或泳道图 |
-| Project Memory｜项目记忆写入 | 你想保存本轮过程 | `docs/ai-worklog/` 内容和索引 |
-| Acceptance Mode｜轻量验收模式 | AI 说修好了，你想知道是否可信 | 完成可信度、已有证据、缺失证据、最小验收动作、追问 Prompt |
+| Project Memory｜项目记忆保存 | 你想保存本轮过程 | `docs/ai-worklog/` 内容和索引 |
+| Confidence Check｜可信度检查 | AI 说修好了，你想知道是否可信 | 完成可信度、已有证据、缺失证据、最小验收动作、追问 Prompt |
 
 ## 示例
 
@@ -149,8 +168,8 @@ Skill 名称保持为 vibebrief。
 - [阶段总结报告示例](vibebrief/examples/milestone-report-example.md)
 - [新对话交接包示例](vibebrief/examples/handoff-pack-example.md)
 - [可视化总结示例](vibebrief/examples/visual-summary-example.md)
-- [项目记忆写入示例](vibebrief/examples/project-memory-example.md)
-- [轻量验收模式示例](vibebrief/examples/acceptance-mode-example.md)
+- [项目记忆保存示例](vibebrief/examples/project-memory-example.md)
+- [可信度检查示例](vibebrief/examples/acceptance-mode-example.md)
 
 ## 本地记忆目录
 
@@ -184,7 +203,7 @@ VibeBrief 不是写代码工具，也不是代码审查工具，更不是用来�
 - 下一轮对话应该怎么继续；
 - 哪些内容值得沉淀为项目记忆。
 
-轻量验收模式只是 VibeBrief 内置的可信度检查能力，用于区分“已修改”、“已验证”和“仍有风险”，不依赖任何其他 Skill。
+可信度检查只是 VibeBrief 内置的轻量能力，用于区分“已修改”、“已验证”和“仍有风险”，不依赖任何其他 Skill。
 
 ## 安装方式
 
@@ -202,7 +221,7 @@ python3 -m py_compile vibebrief/scripts/*.py
 
 ## 路线图
 
-- V0.1：本轮开发简报、阶段总结、交接包、Mermaid 可视化、本地记忆辅助脚本、轻量验收模式。
+- V0.1：本轮开发简报、阶段总结、新对话交接包、Mermaid 可视化、本地记忆辅助脚本、可信度检查。
 - 后续：更多 Agent 安装说明、更丰富的索引和示例、可选集成。
 - V0.1 暂不做：前端 UI、后台守护进程、自动 commit、数据库、飞书、Notion、Slack。
 

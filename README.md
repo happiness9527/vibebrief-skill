@@ -130,7 +130,24 @@ Some AI tools use different local skill directories, instruction folders, or com
 
 If `/vibebrief` is not recognized after installation, it does not mean VibeBrief cannot be used.
 
+If `/vibebrief` returns `Unknown command` after installation, fully exit and restart Claude Code. Newly installed local skills are usually detected in a new session.
+
 You can start with the [Try Without Installing](#try-without-installing) prompt mode, or ask your current AI tool to explain which local instruction or skill installation format it supports.
+
+## Using `/vibebrief`
+
+If you enter only `/vibebrief`, VibeBrief should show a simple mode menu:
+
+1. Session Brief (recommended default): help me understand what the AI did in this coding session
+2. Confidence Check: help me judge whether the AI's "fixed" or "done" claim is actually supported
+3. Handoff Pack: prepare a new-chat handoff so the next AI can continue safely
+4. Milestone Report: decide whether this session is stable enough to count as a project checkpoint
+5. Visual Summary: show the flow, risk, or fix chain with a simple Mermaid diagram
+6. Project Memory: turn this session into save-ready project memory
+
+If unsure, choose 1.
+
+If you enter `/vibebrief` with an AI coding conversation, logs, terminal output, or a natural-language request, VibeBrief should infer the intent automatically instead of forcing the menu.
 
 ## Core Modes
 
@@ -141,7 +158,7 @@ You can start with the [Try Without Installing](#try-without-installing) prompt 
 | Handoff Pack | You are starting a new chat or switching agents | Project background, current status, traps to avoid, executable next prompt |
 | Visual Summary | You want a diagram of what happened | Mermaid flowchart, roadmap, fix chain, risk map, or swimlane |
 | Project Memory | You want to save the session locally | `docs/ai-worklog/` entries and an updated memory index |
-| Acceptance Mode | The AI says something is fixed and you need confidence | Evidence, missing evidence, minimum acceptance action, next question |
+| Confidence Check | The AI says something is fixed and you need confidence | Evidence, missing evidence, minimum acceptance action, next question |
 
 ## Examples
 
@@ -150,7 +167,7 @@ You can start with the [Try Without Installing](#try-without-installing) prompt 
 - [Handoff Pack example](vibebrief/examples/handoff-pack-example.md)
 - [Visual Summary example](vibebrief/examples/visual-summary-example.md)
 - [Project Memory example](vibebrief/examples/project-memory-example.md)
-- [Acceptance Mode example](vibebrief/examples/acceptance-mode-example.md)
+- [Confidence Check example](vibebrief/examples/acceptance-mode-example.md)
 
 ## Memory Structure
 
@@ -204,7 +221,7 @@ python3 -m py_compile vibebrief/scripts/*.py
 
 ## Roadmap
 
-- V0.1: Session briefs, milestone reports, handoff packs, Mermaid summaries, local memory helpers, and light Acceptance Mode.
+- V0.1: Session briefs, milestone reports, new-chat handoff packs, Mermaid summaries, local memory helpers, and confidence checks.
 - Later: More examples, agent-specific install notes, richer memory indexing, and optional integrations.
 - Not planned for V0.1: UI, background daemon, automatic commits, database service, Slack, Notion, or Lark integrations.
 

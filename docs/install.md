@@ -8,13 +8,13 @@ Ask your AI coding agent to install it:
 
 ```text
 Please install this repository as a local skill named vibebrief:
-https://github.com/YOUR_USERNAME/vibebrief-skill
+https://github.com/happiness9527/vibebrief-skill
 Use the vibebrief/ directory as the skill folder.
-Do not merge it into any existing skill.
+Keep the directory name and skill name as vibebrief.
 After installing, confirm where SKILL.md was placed.
 ```
 
-After publishing to GitHub, replace `YOUR_USERNAME` with your actual GitHub username.
+If you fork this project, replace the URL with your actual repository.
 
 ## Manual Install
 
@@ -28,6 +28,8 @@ After publishing to GitHub, replace `YOUR_USERNAME` with your actual GitHub user
 Some AI tools use different local skill directories, instruction folders, or command registration systems.
 
 If `/vibebrief` is not recognized after installation, VibeBrief can still be used.
+
+If `/vibebrief` returns `Unknown command` after installation, fully exit and restart Claude Code. Newly installed local skills are usually detected in a new session.
 
 Start with the prompt in [Try Without Installing](../README.md#try-without-installing), or ask your current AI tool to explain which local instruction or skill installation format it supports.
 
