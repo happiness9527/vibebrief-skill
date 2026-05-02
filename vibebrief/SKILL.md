@@ -11,11 +11,11 @@ VibeBrief is an AI coding briefing skill for non-engineers.
 
 It helps users understand and preserve AI coding work.
 
-It is not a coding tool, not a code review tool, and not a replacement for AskProof.
+It is not a coding tool, not a code review tool, and not an automated acceptance system that replaces human judgment.
 
-AskProof focuses on evidence and acceptance after an AI says "done"; VibeBrief focuses on process understanding, summaries, visual explanations, handoff continuity, and project memory.
+VibeBrief focuses on process understanding, summaries, visual explanations, handoff continuity, and project memory.
 
-VibeBrief may use a light Acceptance Mode when completion claims need to be separated from verified evidence.
+Acceptance Mode is a lightweight confidence check inside VibeBrief. It helps distinguish claimed changes from verified results.
 
 ## Core Duties
 

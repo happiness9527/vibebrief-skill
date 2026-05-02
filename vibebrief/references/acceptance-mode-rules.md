@@ -2,7 +2,7 @@
 
 Acceptance Mode is a light module inside VibeBrief. It helps keep briefs honest when an AI claims something is fixed or done.
 
-It does not replace AskProof. If the user wants a deeper evidence ladder or strict acceptance checklist, recommend using AskProof.
+It is a lightweight confidence check for separating claimed changes, verified results, missing evidence, and remaining risk.
 
 ## Required Sections
 

@@ -1,4 +1,4 @@
-# VibeBrief｜AI开发简报官
+# VibeBrief｜AI 开发过程简报 Skill
 
 🌐 语言：[English](README.md) | [中文](README.zh-CN.md)
 
@@ -45,6 +45,8 @@ VibeBrief 适合正在用 AI 辅助开发，但不想长期陷在代码细节里
 - 使用 Claude Code、Codex、Cursor、OpenClaw 或国内 Agent 平台搭产品的人
 - 需要把 AI 开发过程沉淀成项目资料的人
 
+它优先服务非工程师，但同样适合需要整理 AI coding 过程、交接上下文和沉淀项目记忆的开发者或团队成员。
+
 ## 为什么 AI 自带总结还不够
 
 AI Agent 自带总结通常回答：“我改了什么。”
@@ -61,7 +63,7 @@ VibeBrief 更关心：“这轮开发在整个项目中意味着什么，哪些�
 - [核心模式](#核心模式)
 - [示例](#示例)
 - [本地记忆目录](#本地记忆目录)
-- [和 AskProof 有什么区别](#和-askproof-有什么区别)
+- [VibeBrief 不是什么](#vibebrief-不是什么)
 - [安装方式](#安装方式)
 - [路线图](#路线图)
 
@@ -117,8 +119,7 @@ flowchart LR
 请从这个仓库安装 VibeBrief 本地 Skill：
 https://github.com/happiness9527/vibebrief-skill
 Skill 名称保持为 vibebrief。
-它是独立项目，不要合并进 AskProof，也不要改名。
-安装完成后，请告诉我 SKILL.md 被放在哪里。
+请保持目录名和 Skill 名称为 vibebrief，安装完成后告诉我 SKILL.md 被放在哪里。
 ```
 
 如果你 fork 了本项目，请把上面的 URL 替换成你的实际仓库地址。
@@ -168,11 +169,22 @@ docs/ai-worklog/
 └── index.json
 ```
 
-## 和 AskProof 有什么区别
+## VibeBrief 不是什么
 
-AskProof 是独立的“AI 验收官”Skill，重点是 AI 说“完成了”之后，如何追问证据、判断是否真的完成。
+VibeBrief 不是写代码工具，也不是代码审查工具，更不是用来替代开发者判断的自动验收系统。
 
-VibeBrief 不替代 AskProof。VibeBrief 的主线是 AI coding 全过程的简报、复盘、可视化和项目记忆。它只内置轻量 Acceptance Mode，用来在简报里区分已修改、已验证、未验证和有风险。
+它的核心作用是把一次 AI coding 对话整理成非工程师也能看懂、能复盘、能交接的项目过程资料。
+
+它重点回答：
+
+- 这轮 AI 到底做了什么；
+- 哪些只是 AI 声称完成；
+- 哪些已经有验证证据；
+- 当前项目风险是什么；
+- 下一轮对话应该怎么继续；
+- 哪些内容值得沉淀为项目记忆。
+
+轻量验收模式只是 VibeBrief 内置的可信度检查能力，用于区分“已修改”、“已验证”和“仍有风险”，不依赖任何其他 Skill。
 
 ## 安装方式
 

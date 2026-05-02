@@ -43,6 +43,8 @@ It is especially useful for:
 - People building demos, internal tools, automations, or product prototypes with AI help
 - Anyone who needs a clear project memory after the coding session ends
 
+It is non-engineer-first, but also useful for developers or teams that need clearer AI coding records, handoffs, and project memory.
+
 ## Why AI Agent Summaries Are Not Enough
 
 Most agent summaries answer: "What did I change?"
@@ -59,7 +61,7 @@ The difference matters because agent summaries are often technical, local to one
 - [Core Modes](#core-modes)
 - [Examples](#examples)
 - [Memory Structure](#memory-structure)
-- [How It Differs From AskProof](#how-it-differs-from-askproof)
+- [What VibeBrief Is Not](#what-vibebrief-is-not)
 - [Installation](#installation)
 - [Roadmap](#roadmap)
 
@@ -114,7 +116,7 @@ You can ask your coding agent to install this repository as a local skill:
 Please install the VibeBrief skill from this repository:
 https://github.com/happiness9527/vibebrief-skill
 Keep it as an independent skill named vibebrief.
-Do not merge it into AskProof or rename any existing skill.
+Keep the directory name and skill name as vibebrief.
 After installing, show me where the SKILL.md file was placed.
 ```
 
@@ -169,15 +171,22 @@ docs/ai-worklog/
 
 V0.1 should generate the content first and ask before writing files. It should not silently write private project history.
 
-## How It Differs From AskProof
+## What VibeBrief Is Not
 
-AskProof is an independent "AI acceptance officer" skill. It focuses on what to ask when an AI says "done" and how to judge whether completion is proven.
+VibeBrief is not a coding tool, a code review tool, or an automated acceptance system that replaces human judgment.
 
-VibeBrief does not replace AskProof.
+Its core job is to turn one AI coding conversation into project process material that non-engineers can understand, review, hand off, and preserve.
 
-VibeBrief focuses on the full AI coding process: briefing, stage reports, diagrams, project memory, and handoff continuity.
+It focuses on answering:
 
-It includes a light Acceptance Mode only to keep briefs honest about what is modified, verified, unverified, and risky.
+- What did the AI actually do?
+- Which parts are only claimed by the AI?
+- Which parts have verification evidence?
+- What are the current project risks?
+- How should the next conversation continue?
+- What should be preserved as project memory?
+
+Acceptance Mode is a lightweight confidence check inside VibeBrief. It helps distinguish claimed changes from verified results.
 
 ## Installation
 
