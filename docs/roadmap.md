@@ -15,19 +15,17 @@ V0.1 focuses on the smallest useful open source skill:
 
 ## Later
 
-Possible later improvements:
+Possible later improvements will stay focused on clarity and installation quality:
 
 - More agent-specific install notes
-- More example galleries for non-engineers
-- Better project profile handling
-- Richer memory index metadata
-- Optional export formats for reports
-- Optional integrations after the core skill is stable
+- More lightweight examples
+- Better guidance for safe project memory
+- Clearer compatibility notes for AI coding tools
 
 ## Not Planned For V0.1
 
 - Frontend UI
-- Lark, Notion, or Slack integration
+- Third-party integrations
 - Background daemon
 - Automatic Git commit
 - Automatic GitHub publishing

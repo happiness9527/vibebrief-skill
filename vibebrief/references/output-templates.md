@@ -1,6 +1,6 @@
 # Output Templates
 
-Use these templates when the user needs a structured VibeBrief artifact.
+Use this file as lightweight guidance. Do not treat it as a rigid report generator.
 
 ## Bare `/vibebrief` Menu
 
@@ -36,148 +36,30 @@ What would you like VibeBrief to do?
 If unsure, choose 1.
 ```
 
-## Session Brief
+## Session Brief Guidance
 
-````markdown
-## Session Brief
+A session brief should usually cover:
 
-**Current stage:** ...
+- Goal
+- Actual work
+- Confirmed vs unconfirmed status
+- Risks
+- Next step
 
-**Session goal:** ...
+Keep it short unless the user asks for a fuller record.
 
-**What the AI actually did:**
-- ...
+## Milestone Report Guidance
 
-**Why this matters for the project:**
-- ...
+A milestone report should help the user decide whether a stage is stable enough to preserve. Keep the focus on the stage goal, current capability, known uncertainty, and next boundary.
 
-**Key files or modules:**
-- `path`: plain-language meaning
+## Handoff Pack Guidance
 
-**Verified:**
-- ...
+A handoff pack should be understandable by a new AI agent without the full prior conversation. Keep it compact enough to paste into a new chat.
 
-**Unverified:**
-- ...
+## Confidence Check Guidance
 
-**Risks:**
-- ...
+A confidence check should separate the AI's claim from available evidence and name the smallest reasonable verification step. Do not claim something was tested unless evidence is present.
 
-**Next step:**
-- ...
+## Visual Summary Guidance
 
-**Prompt for the next AI:**
-```text
-...
-```
-````
-
-## Milestone Report
-
-````markdown
-## Milestone Report
-
-**Milestone name:** ...
-**Stage goal:** ...
-
-**Completed capability:**
-- ...
-
-**Key decisions:**
-- ...
-
-**Stable today:**
-- ...
-
-**Verified:**
-- ...
-
-**Open risks:**
-- ...
-
-**Snapshot recommendation:** Save / Do not save / Unconfirmed
-
-**Next-stage boundary:**
-- ...
-
-**Do not expand yet:**
-- ...
-
-**Prompt for the next AI:**
-```text
-...
-```
-````
-
-## Handoff Pack
-
-````markdown
-## Handoff Pack
-
-**Project background:** ...
-**Current goal:** ...
-**Current status:** ...
-
-**Recently completed:**
-- ...
-
-**Unresolved issues:**
-- ...
-
-**Key decisions:**
-- ...
-
-**Known risks:**
-- ...
-
-**Do not repeat these mistakes:**
-- ...
-
-**Prompt for the next AI:**
-```text
-...
-```
-````
-
-## Acceptance Mode
-
-````markdown
-## Acceptance Check
-
-**Completion confidence:** High / Medium / Low / Unconfirmed
-
-**What appears changed:**
-- ...
-
-**Evidence available:**
-- ...
-
-**Evidence missing:**
-- ...
-
-**Minimum acceptance action:**
-- ...
-
-**Should continue?** Yes / Not yet / Unconfirmed
-
-**Next question to ask the AI:**
-```text
-...
-```
-````
-
-## Visual Summary
-
-Always include Mermaid plus plain-language explanation:
-
-````markdown
-```mermaid
-flowchart LR
-    A[User goal] --> B[AI changes]
-    B --> C{Verified?}
-    C -->|No| D[Ask for evidence]
-    C -->|Yes| E[Record as stable]
-```
-
-In plain language: ...
-````
+Use Mermaid only when it makes the situation easier to understand. Keep labels short and explain the diagram in plain language.

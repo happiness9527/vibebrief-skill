@@ -2,7 +2,7 @@
 
 ## 1. You Do Not Understand What The AI Changed
 
-Use Session Brief. VibeBrief explains the session goal, actual work, project meaning, verified content, unverified content, and next step.
+Use Session Brief for a short plain-language explanation of the coding session.
 
 ## 2. You Need A Stage Summary
 
@@ -14,7 +14,7 @@ Use Handoff Pack when a long AI coding thread is getting too large or the next a
 
 ## 4. You Want A Visual Explanation
 
-Use Visual Summary to turn a messy coding process into a Mermaid flowchart, roadmap, bug-fix chain, risk map, or collaboration swimlane.
+Use Visual Summary when a simple Mermaid diagram would make the situation easier to understand.
 
 ## 5. You Want Local Project Memory
 
@@ -22,7 +22,7 @@ Use Project Memory when a session should be saved under `docs/ai-worklog/` as a 
 
 ## 6. The AI Says "Fixed"
 
-Use Acceptance Mode when the AI claims completion but does not provide enough evidence.
+Use Confidence Check when the AI claims completion but the evidence is unclear.
 
 ## Fictional Example Projects
 

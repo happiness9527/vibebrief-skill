@@ -6,7 +6,7 @@
 
 AI agents can write code, fix bugs, and explain what they changed.
 
-But if you are not an engineer, the harder problem is:
+But if you are not an engineer, the harder problem is staying oriented:
 
 - What actually happened in this coding session?
 - Why did the AI make those changes?
@@ -16,13 +16,13 @@ But if you are not an engineer, the harder problem is:
 - How do I continue in the next chat?
 - How do I turn this messy conversation into useful project memory?
 
-VibeBrief helps non-engineers turn AI coding conversations into plain-language session briefs, milestone reports, visual summaries, and handoff-ready project memory.
+VibeBrief helps turn AI coding conversations into plain-language session briefs, handoff notes, visual summaries, and reusable project memory.
 
 ## What Is VibeBrief
 
 VibeBrief is a non-engineer-first AI coding briefing skill.
 
-It does not write code for you. It turns messy AI coding conversations, code-change summaries, bug-fix notes, validation results, and key decisions into understandable project assets:
+It does not write code for you. It turns messy AI coding conversations into understandable project assets:
 
 - Session briefs
 - Milestone reports
@@ -45,13 +45,11 @@ It is especially useful for:
 
 It is non-engineer-first, but also useful for developers or teams that need clearer AI coding records, handoffs, and project memory.
 
-## Why AI Agent Summaries Are Not Enough
+## Why It Exists
 
-Most agent summaries answer: "What did I change?"
+Most AI coding tools can summarize what they changed.
 
-VibeBrief answers a different question: "What does this session mean for the project, what is verified, what is still risky, and how should the next AI continue?"
-
-The difference matters because agent summaries are often technical, local to one chat, and weak at preserving decisions, risks, stage boundaries, and handoff context.
+VibeBrief keeps the user-facing thread clearer: what happened, what is still uncertain, and how the next chat should continue.
 
 ## Quick Navigation
 
@@ -74,15 +72,12 @@ I fixed the workspace window sync issue, changed demo_web_app.py and controller.
 and it should start correctly now.
 ```
 
-VibeBrief should turn it into:
+VibeBrief should turn it into a short plain-language brief:
 
-- Session goal: Fix the workspace window sync issue.
-- What the AI changed: It changed the web entry point and controller logic.
-- Project meaning: This may improve the stability of the course workspace startup.
-- Verified: The AI did not provide a clear run result, so this is unconfirmed.
-- Risk: Without running `/workspace`, real usability is not proven.
-- Next step: Ask for the startup command, run result, or screenshot.
-- Next prompt: "Please run `/workspace` first and provide the result. Do not expand features until startup is verified."
+- The goal was to fix workspace startup behavior.
+- The AI says it changed the web entry and controller.
+- The result is still unconfirmed because no run output was shown.
+- The next step is to ask for a startup check before adding features.
 
 ```mermaid
 flowchart LR
@@ -99,10 +94,8 @@ Copy this prompt into your AI coding agent:
 
 ```text
 Act as VibeBrief, an AI coding briefing skill for non-engineers.
-Turn the following AI coding conversation into a plain-language Session Brief.
-Separate what was changed from what was verified. Do not invent evidence.
-Include project meaning, current risks, next steps, and a copy-paste prompt for the next AI chat.
-Use Mermaid if a simple diagram would help.
+Turn the following AI coding conversation into a plain-language session brief.
+Separate confirmed from unconfirmed content and suggest the next step.
 
 Conversation:
 [paste the AI coding conversation here]
@@ -151,14 +144,14 @@ If you enter `/vibebrief` with an AI coding conversation, logs, terminal output,
 
 ## Core Modes
 
-| Mode | Use it when | Output |
+| Mode | Use it when | Typical output |
 | --- | --- | --- |
-| Session Brief | A coding session just ended or you pasted an AI coding summary | Goal, actual work, project meaning, verified and unverified items, risks, next prompt |
-| Milestone Report | A phase may be stable enough to preserve | Stage goal, completed capability, decisions, risks, next boundary |
-| Handoff Pack | You are starting a new chat or switching agents | Project background, current status, traps to avoid, executable next prompt |
-| Visual Summary | You want a diagram of what happened | Mermaid flowchart, roadmap, fix chain, risk map, or swimlane |
-| Project Memory | You want to save the session locally | `docs/ai-worklog/` entries and an updated memory index |
-| Confidence Check | The AI says something is fixed and you need confidence | Evidence, missing evidence, minimum acceptance action, next question |
+| Session Brief | A coding session just ended or you pasted an AI coding summary | A short explanation of what happened and what to do next |
+| Milestone Report | A phase may be stable enough to preserve | A lightweight stage review |
+| Handoff Pack | You are starting a new chat or switching agents | A compact new-chat context package |
+| Visual Summary | You want a diagram of what happened | A simple Mermaid diagram and explanation |
+| Project Memory | You want to save the session locally | Save-ready notes for `docs/ai-worklog/` |
+| Confidence Check | The AI says something is fixed and you need confidence | A lightweight check of claim, evidence, and remaining uncertainty |
 
 ## Examples
 
@@ -192,16 +185,7 @@ V0.1 should generate the content first and ask before writing files. It should n
 
 VibeBrief is not a coding tool, a code review tool, or an automated acceptance system that replaces human judgment.
 
-Its core job is to turn one AI coding conversation into project process material that non-engineers can understand, review, hand off, and preserve.
-
-It focuses on answering:
-
-- What did the AI actually do?
-- Which parts are only claimed by the AI?
-- Which parts have verification evidence?
-- What are the current project risks?
-- How should the next conversation continue?
-- What should be preserved as project memory?
+Its core job is to make AI coding work easier to understand, review, hand off, and preserve.
 
 Acceptance Mode is a lightweight confidence check inside VibeBrief. It helps distinguish claimed changes from verified results.
 
@@ -222,8 +206,8 @@ python3 -m py_compile vibebrief/scripts/*.py
 ## Roadmap
 
 - V0.1: Session briefs, milestone reports, new-chat handoff packs, Mermaid summaries, local memory helpers, and confidence checks.
-- Later: More examples, agent-specific install notes, richer memory indexing, and optional integrations.
-- Not planned for V0.1: UI, background daemon, automatic commits, database service, Slack, Notion, or Lark integrations.
+- Later: More lightweight examples, agent-specific install notes, and clearer compatibility guidance.
+- Not planned for V0.1: UI, background daemon, automatic commits, database service, or third-party integrations.
 
 See [docs/roadmap.md](docs/roadmap.md) for details.
 

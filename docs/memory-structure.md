@@ -35,15 +35,15 @@ Stage-level reports that mark possible checkpoints.
 
 ### decisions/
 
-Important product, technical, or workflow decisions.
+Short decision notes.
 
 ### risks/
 
-Open risks, unverified claims, and acceptance gaps.
+Open risks or uncertainty notes.
 
 ### handoff/
 
-Prompt-ready packages for new AI chats or different agents.
+Compact handoff notes for new AI chats.
 
 ### visuals/
 
@@ -51,7 +51,7 @@ Mermaid diagrams and short explanations.
 
 ### index.json
 
-A generated index of memory records.
+A lightweight generated index.
 
 ## Privacy
 

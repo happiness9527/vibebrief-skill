@@ -6,41 +6,19 @@
 Help me save this session as local project memory.
 ```
 
-## VibeBrief Should Generate First
+## Possible VibeBrief Output
 
-```markdown
-# Session: DemoDesk workspace sync fix
+Suggested record:
 
-Date: 2026-05-02
-Mode: Session Brief
-Source status: AI-provided summary
-Verification status: Unverified
+- Title: DemoDesk workspace sync fix
+- Status: unverified
+- Summary: AI says it changed the workspace entry and controller.
+- Next action: run `/workspace` and record the result.
 
-## Summary
+Suggested path:
 
-The AI says it fixed the workspace window sync problem by changing the web entry file and controller.
-
-## Project Meaning
-
-If verified, this improves the stability of the main workspace startup flow.
-
-## Verified
-
-No direct evidence was provided.
-
-## Risks
-
-The app may still fail on fresh startup.
-
-## Next Action
-
-Run `/workspace` and provide the result before adding new features.
+```text
+docs/ai-worklog/sessions/YYYY-MM-DD-demodesk-workspace-sync-fix.md
 ```
 
-## Suggested Write Paths
-
-- `docs/ai-worklog/sessions/2026-05-02-demodesk-workspace-sync-fix.md`
-- `docs/ai-worklog/current-status.md`
-- `docs/ai-worklog/index.json`
-
-VibeBrief V0.1 should ask before writing unless the user already gave clear write permission.
+VibeBrief should ask before writing unless the user already gave clear write permission.

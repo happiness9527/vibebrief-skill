@@ -26,7 +26,7 @@ Use VibeBrief to create:
 - Handoff Pack: a concise package for starting a new chat or switching AI agents.
 - Visual Summary: Mermaid diagrams that make the session, stage, risk, or collaboration flow easier to understand.
 - Project Memory: local worklog content for `docs/ai-worklog/`.
-- Acceptance Mode: a light evidence check when the user asks whether an AI's "fixed" or "done" claim is believable.
+- Confidence Check: a light evidence check when the user asks whether an AI's "fixed" or "done" claim is believable.
 
 ## Intent Routing
 
@@ -84,16 +84,13 @@ Advanced commands may be accepted as aliases:
 
 For detailed routing rules, read `references/intent-router.md`.
 
-## Always Do
+## Quality Principles
 
 - Use plain language for non-engineers.
-- Explain what each important change means for the product or project.
-- Separate "changed", "verified", "unverified", "risky", "safe to continue", and "not recommended to continue".
-- Mark unknowns as "unconfirmed" instead of filling gaps.
-- Include the current stage or likely stage of the project.
+- Explain technical work by its project meaning.
+- Mark unknowns as unconfirmed instead of filling gaps.
 - Give practical next steps.
-- Include a copy-paste prompt for the next AI coding session.
-- Use Mermaid when a visual summary would reduce confusion or when the user asks for a diagram.
+- Use Mermaid when a simple visual would reduce confusion.
 - Protect privacy: remove or generalize company names, customer names, tokens, internal paths, and sensitive project details.
 
 ## Asset-Ready Output Rules
@@ -126,23 +123,19 @@ It must include project background, current goal, current status, recent complet
 - Do not perform deep code review unless the user explicitly asks for engineering review.
 - Do not let the summary sprawl when the user needs a decision; help them narrow the next step.
 
-## Default Output Shape
+## Typical Output Elements
 
-Every output should contain:
+VibeBrief outputs should stay compact. Depending on the user's request, they may include:
 
-1. Current mode
-2. Current project stage
-3. Plain-language summary
-4. What changed
-5. What is verified
-6. What is unverified
-7. Risks or open questions
-8. Next recommended step
-9. Copy-paste prompt for the next AI
+- A plain-language summary.
+- Confirmed and unconfirmed points.
+- Risks or open questions.
+- A next recommended step.
+- A short handoff prompt when useful.
 
 For save-ready outputs, include enough title, date, source status, verification status, and next action context for the note to stand alone in `docs/ai-worklog/`.
 
-Use the exact templates in `references/output-templates.md` when the user needs a structured artifact.
+Use `references/output-templates.md` only as lightweight guidance, not as a rigid report generator.
 
 ## Mode References
 
@@ -153,7 +146,7 @@ Read only the relevant file when a mode needs more detail:
 - Handoff Pack: `references/handoff-pack-rules.md`
 - Visual Summary: `references/visual-summary-rules.md`
 - Project Memory: `references/project-memory-rules.md`
-- Acceptance Mode: `references/acceptance-mode-rules.md`
+- Confidence Check: `references/acceptance-mode-rules.md`
 - Project profile: `references/project-profile-template.md`
 
 ## Privacy Handling

@@ -4,35 +4,6 @@ Handoff Pack prepares a new AI chat or a different agent to continue without los
 
 A Handoff Pack must be understandable by a new AI agent without reading the full prior conversation.
 
-## Required Sections
+Keep it compact enough to paste into a new chat. It should preserve the current goal, current state, unresolved issues, important decisions, known risks, and a next executable prompt.
 
-- Project background
-- Current goal
-- Current status
-- Recent completed work
-- Unresolved issues
-- Known risks
-- Decisions already made
-- Traps to avoid
-- Next executable prompt
-
-## Prompt Rules
-
-The prompt must be executable by the next AI. It should include:
-
-- The immediate task
-- What context to read first
-- What not to change
-- What evidence to provide before claiming completion
-- Whether to avoid feature expansion
-
-## Keep It Compact
-
-The handoff pack should be dense enough to carry context, but short enough to paste into a new chat.
-
-If the user provides too much history, summarize into:
-
-- Background
-- Current state
-- Open risks
-- Next action
+If the user provides too much history, reduce it to the context needed for the next safe action.
